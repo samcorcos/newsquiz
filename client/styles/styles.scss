@@ -127,3 +127,10 @@ background-color: #ea454b;
     margin: auto;
   }
 }
+
+.col {
+  select, button {
+    margin: 2rem auto;
+    display: block;
+  }
+}
