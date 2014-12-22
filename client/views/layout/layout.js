@@ -3,7 +3,9 @@ Template.layout.rendered = function() {
 
   Meteor.call("getData", "02", "2013", "Sports", function(err, result) {
     if (err) { console.log("Error with API Call") }
-    else { console.log(result)}
+    else {
+      console.log(result);
+    }
   })
 
 
