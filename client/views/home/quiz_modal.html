@@ -11,7 +11,7 @@
         <button class="btn">I'm feeling lucky</button>
       </div>
     </div>
-    <a href="#" class="waves-effect btn-flat modal-close">Agree</a>
+    <button type="submit" href="#" class="waves-effect btn-flat modal-close" id="take-the-quiz">Take the quiz!</button>
   </div>
 </template>
 
@@ -21,7 +21,7 @@
 
 
 <template name="year">
-  <select class="disabled">
+  <select id="year-select" class="disabled" required>
     <option value="" disabled selected>Choose a year</option>
     <option value="2014">2014</option>
     <option value="2013">2013</option>
@@ -30,7 +30,7 @@
 </template>
 
 <template name="month">
-  <select class="disabled">
+  <select id="month-select" class="disabled" required>
     <option value="" disabled selected>Choose a month</option>
     <option value="all">All</option>
     <option value="January">January</option>
@@ -49,8 +49,9 @@
 </template>
 
 <template name="category">
-  <select class="disabled">
+  <select id="category-select" class="disabled" required>
     <option value="" disabled selected>Choose a category</option>
+    <option value="All">All</option>
     <option value="Sports">Sports</option>
     <option value="Politics">Politics</option>
     <option value="Technology">Technology</option>
