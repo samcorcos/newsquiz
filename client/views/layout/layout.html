@@ -1,11 +1,13 @@
 <template name="layout">
 	<div>
+	<div class="row">
 		<span class="nav-options">
 			{{> loginButtons}}
 		</span>
 		<span class="nav-options">
-			Quiz
+			<a style="color:#000;" href="/quiz">Quiz</a>
 		</span>
+	</div>
 		<!-- {{> navbar}} -->
 		{{> yield}}
 	</div>

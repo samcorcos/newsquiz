@@ -111,7 +111,19 @@ background-color: #ea454b;
 .nav-options {
   float: right;
   padding: 1rem;
+  font: 300 1.3em $font-stack;
   &:first-child {
     margin-right: 10%;
+  }
+  a {
+    text-decoration: none !important;
+  }
+}
+
+#main-logo {
+  svg {
+    /* margin-top: 5rem; */
+    display: block;
+    margin: auto;
   }
 }
