@@ -1,9 +1,24 @@
 Meteor.methods
   getData: (month, year, category) ->
-    date = convertDate(month,year)
+    startDate = startDate(month,year)
+    endDate = endDate(month,year)
     response = Meteor.http.call('GET', 'http://api.nytimes.com/svc/search/v2/articlesearch.json?fq=source:("The New York Times") AND type_of_material:("News") AND section_name: ("#{category}") AND pub_date')
 
-convertDate = (month, year) ->
+
+
+startDate = (month, year) ->
+  year + month + "01"
+
+endDate = (month, year) ->
+  if month is "02"
+    day = "28"
+  else if month is "04" or "06" or "09" or "11"
+    day = "30"
+  else day = "31"
+  year + month + day
+
+console.log endDate("04", "2011")
+
 
 
 #  var url = 'http://api.nytimes.com/svc/search/v2/articlesearch.json?fq=source:("The New York Times") AND type_of_material:("News") AND section_name:("Sports" "US" "Science" "Arts" ) AND pub_date:("2014-12-13")' + '&page=' + resultsPageNumber + '&api-key=' + NYTapiKey;
