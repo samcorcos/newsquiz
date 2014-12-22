@@ -1,3 +1,6 @@
+ResultsStore = new Mongo.Collection("resultsStore");
+
+
 this.App = {};
 this.Helpers = {};
 

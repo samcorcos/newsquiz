@@ -53,6 +53,7 @@ background-color: #ea454b;
 
 /* Better way to set background image to page */
 .nyt-background {
+  min-height: 80vh;
   width: 100%;
   background: url(/nyt.png) no-repeat center center;
   -webkit-background-size: cover;
@@ -131,4 +132,31 @@ background-color: #ea454b;
     margin: 2rem auto;
     display: block;
   }
+}
+
+
+
+
+
+.pace {
+  -webkit-pointer-events: none;
+  pointer-events: none;
+  
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.pace-inactive {
+  display: none;
+}
+
+.pace .pace-progress {
+  background: #000000;
+  position: fixed;
+  z-index: 2000;
+  top: 0;
+  right: 100%;
+  width: 100%;
+  height: 2px;
 }

@@ -3,9 +3,11 @@ Meteor.methods({
     startDate = startDate(month, year);
     endDate = endDate(month, year);
     key = "555828fbba8186bbd0311542bc625579:9:70514653";
-    response = Meteor.http.call('GET', 'http://api.nytimes.com/svc/search/v2/articlesearch.json?fq=source:("The New York Times")&type_of_material:("News")&section_name:(' + category +')&begin_date=' + startDate + '&end_date=' + endDate + '&api-key=' + key)
-    console.log(response)
-    return response;
+    response = Meteor.http.call('GET', 'http://api.nytimes.com/svc/search/v2/articlesearch.json?fq=source:("The New York Times")&type_of_material:("News")&section_name:(' + category +')&begin_date=' + startDate + '&end_date=' + endDate + '&api-key=' + key);
+    // The API only gives 10 results at a time..... we're going to have to call and store a lot of these in a database.
+
+
+    return response.data.response.docs;
   }
 })
 
@@ -40,4 +42,4 @@ function endDate(month, year) {
 //   The filter query can be specified with or without a limiting field: label.
 //   See Filtering Your Search for more information about filtering.
 //   eg:    &fq=news_desk:("Sports" "Foreign")
-//  
+//
