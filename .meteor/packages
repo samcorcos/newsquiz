@@ -17,3 +17,6 @@ accounts-base
 accounts-password
 accounts-ui
 d3
+accounts-facebook
+accounts-twitter
+accounts-github
