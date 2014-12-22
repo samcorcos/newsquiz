@@ -1,5 +1,12 @@
 Template.layout.rendered = function() {
   $('.modal-trigger').leanModal();
+
+  Meteor.call("getData", "02", "2013", "Sports", function(err, result) {
+    if (err) { console.log("Error with API Call") }
+    else { console.log(result)}
+  })
+
+
 };
 
 Template.layout.events({
