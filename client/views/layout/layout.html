@@ -1,6 +1,12 @@
 <template name="layout">
 	<div>
-		{{> navbar}}
+		<span class="nav-options">
+			{{> loginButtons}}
+		</span>
+		<span class="nav-options">
+			Quiz
+		</span>
+		<!-- {{> navbar}} -->
 		{{> yield}}
 	</div>
 	<div id="footer">

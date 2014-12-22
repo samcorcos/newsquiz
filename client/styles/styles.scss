@@ -107,3 +107,11 @@ background-color: #ea454b;
     text-align: center;
   }
 }
+
+.nav-options {
+  float: right;
+  padding: 1rem;
+  &:first-child {
+    margin-right: 10%;
+  }
+}
