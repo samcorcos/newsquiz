@@ -12,6 +12,15 @@ Template.layout.events({
     if ($("#year-select").val()) {
       Router.go("/quiz")
     } else { toast("Please select a year.", 3000)}
+
+
+    Quiz.remove({});
+    Quiz.insert({
+      year: year,
+      month: month,
+      category: category
+    })
+
   }
 });
 
